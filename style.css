@@ -1,0 +1,69 @@
+* *::after *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.carousal {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.carousal button {
+  font-size: 2rem;
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousal-button {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+}
+
+.carousal-button:hover,
+.carousal-button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousal-button:focus {
+  outline: solid black;
+}
+
+.carousal-button.left {
+  left: 1rem;
+}
+
+.carousal-button.right {
+  right: 1rem;
+}
+
+.carousal > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.slide[data-active] {
+  opacity: 1;
+}
+
+.slide > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
